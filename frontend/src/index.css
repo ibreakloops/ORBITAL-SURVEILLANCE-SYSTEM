@@ -1,0 +1,58 @@
+:root {
+    --bg: #070b10;
+    --surface: #0d1420;
+    --surface2: #111b2a;
+    --border: #1c2d42;
+    --borderHi: #2a4060;
+    --accent: #00d4ff;
+    --accentDim: #005f72;
+    --accentGlow: rgba(0, 212, 255, 0.12);
+    --green: #00ff9d;
+    --amber: #ffb300;
+    --red: #ff3b3b;
+    --text: #c8dff0;
+    --textDim: #5a7a9a;
+    --textBright: #e8f4ff;
+    --mono: 'Share Tech Mono', monospace;
+    --sans: 'Rajdhani', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--borderHi);
+    border-radius: 2px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+}

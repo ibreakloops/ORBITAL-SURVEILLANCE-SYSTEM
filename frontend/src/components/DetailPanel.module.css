@@ -1,0 +1,320 @@
+.panel {
+    width: 272px;
+    flex-shrink: 0;
+    background: var(--surface);
+    border-left: 0.5px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    animation: slideIn 0.18s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(16px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 14px 14px 12px;
+    border-bottom: 0.5px solid var(--border);
+    flex-shrink: 0;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--textBright);
+    letter-spacing: 0.03em;
+    word-break: break-word;
+    margin-bottom: 3px;
+}
+
+.nameRow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+}
+
+.orbitBadge {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    padding: 2px 6px;
+    border: 0.5px solid;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.norad {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--textDim);
+    letter-spacing: 0.06em;
+}
+
+.close {
+    color: var(--textDim);
+    font-size: 16px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-left: 6px;
+}
+
+.close:hover {
+    color: var(--text);
+    background: var(--surface2);
+}
+
+/* Sections */
+.section {
+    padding: 12px 14px;
+    border-bottom: 0.5px solid var(--border);
+    flex-shrink: 0;
+}
+
+.sectionLabel {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* Telemetry grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.cell {}
+
+.val {
+    font-family: var(--mono);
+    font-size: 18px;
+    color: var(--textBright);
+    letter-spacing: 0.02em;
+}
+
+.unit {
+    font-size: 12px;
+    color: var(--textDim);
+}
+
+.key {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--textDim);
+    letter-spacing: 0.09em;
+    margin-top: 2px;
+}
+
+/* Speed bar */
+.barTrack {
+    height: 3px;
+    background: var(--surface2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 12px 0 4px;
+}
+
+.barFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--accent));
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+
+.barLabels {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--textDim);
+}
+
+/* Passes */
+.locRow {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.locInput {
+    flex: 1;
+    min-width: 0;
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    border-radius: 4px;
+    padding: 6px 7px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.12s;
+}
+
+.locInput:focus {
+    border-color: var(--accentDim);
+}
+
+.locBtn {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    padding: 6px 9px;
+    border-radius: 4px;
+    border: 0.5px solid var(--accentDim);
+    color: var(--accent);
+    background: var(--accentGlow);
+    transition: background 0.12s;
+    flex-shrink: 0;
+}
+
+.locBtn:hover {
+    background: rgba(0, 212, 255, 0.2);
+}
+
+.loading {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--textDim);
+    text-align: center;
+    padding: 14px;
+    animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .3
+    }
+}
+
+.noPasses {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--textDim);
+    text-align: center;
+    padding: 18px 8px;
+    line-height: 1.7;
+}
+
+.noPasses span {
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+.passCard {
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 9px 11px;
+    margin-bottom: 7px;
+}
+
+.passNum {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--amber);
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+}
+
+.passRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+}
+
+.passKey {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--textDim);
+    letter-spacing: 0.06em;
+    min-width: 28px;
+}
+
+.passVal {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text);
+    text-align: right;
+}
+
+/* ── Orbital Elements ─────────────────────────────── */
+
+.elemGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.inclWrap {
+    margin-top: 2px;
+}
+
+.inclBar {
+    height: 3px;
+    background: var(--surface2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.inclFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--amber));
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+
+.epochRow {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 0.5px solid var(--border);
+}
+
+.epochKey {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--textDim);
+    letter-spacing: 0.07em;
+}
+
+.epochVal {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.epochDate {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--textDim);
+    margin-left: auto;
+}

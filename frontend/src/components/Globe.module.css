@@ -1,0 +1,40 @@
+.wrap {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    background: #070b10;
+}
+
+/* R3F mounts its own <canvas> — make it fill the wrapper */
+.wrap > canvas {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: grab;
+}
+
+.wrap > canvas:active {
+    cursor: grabbing;
+}
+
+.legend {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: var(--mono);
+    font-size: 11px;
+    background: rgba(7, 11, 16, 0.85);
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.legend span {
+    white-space: nowrap;
+}
